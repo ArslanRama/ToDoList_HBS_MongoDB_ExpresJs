@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-color: rgb(142, 179, 142);
+      color: rgb(155, 3, 3);
+      text-align: center;
+  }
+  
+  .form {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .task {
+    display: inline-block;
+   
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:transparent;
+    list-style-type: none;
+    border: 1px solid black;
+    
+  }
+
+  .btn-danger, .btn-primary {
+    width: 15%;
+    margin: 5px auto; 
+  }
+
+  ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+     text-align: center;
+     font-weight: bold;
+     font-size: 20px;
+   }
+  
+  
+  li  {
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+  }
+    
+  /* Profile */
+  ul li {
+     
+      list-style-type: none;
+      display: inline-block;
+      text-align: center;
+      padding: 5px;
+      text-transform: uppercase;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: rgb(230, 218, 218);
+  }
+  a:hover {
+    color: rgb(255, 0, 0);
+  }
+ 
+  
+     
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    button[type=submit] {
+      background-color: #d66441;
+      color: rgb(19, 17, 17);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      float: center;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #a31f16;
+      color: rgb(240, 232, 232);
+    }
+    
+   
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }

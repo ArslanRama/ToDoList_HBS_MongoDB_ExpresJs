@@ -1,0 +1,34 @@
+<h1>Daily Todo List</h1>
+{{#if message}}
+<div class="alert alert-success" role="alert">
+  {{message}}
+</div>
+{{/if}}
+<form action="/todolist" method="POST" class="form">
+    <label>Title</label>
+    <input type="text" class="form-control" name="title">
+    <label>Time</label>
+    <input type="text" class="form-control" name="time">
+    <label>Date</label>
+    <input type="date" class="form-control" name="date">
+    <br>
+    <button type="submit" class="btn btn-success">
+        Add Task
+    </button>
+</form>
+
+
+{{#if tasks}}
+<h1>ToDo Daily Task</h1>
+    <ul class="task">
+        {{#each tasks}}
+            <li>
+                Title: {{title}}, 
+                Time: {{time}}, 
+                Date: {{date}}
+            </li>
+            <a class="btn btn-danger" href="/todo/delete/{{_id}}">Delete</a>
+                <a class="btn btn-primary" href="/todo/update/{{_id}}">Update</a>
+        {{/each}}
+    </ul>
+{{/if}}
