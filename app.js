@@ -42,14 +42,9 @@ app.post('/todolist', (req, res)=> {
             pathname: './todolist',
             query:{
                 message: 'A new task has been created',
-                success: true
+                successMsg: true
             }
-
         }))
-        // res.redirect('/todolist');
-        // res.render('tasklist', {
-        //     successMsg: 'Your Task successfully added'
-        // })
     })
 })
 //! Read(R)
@@ -68,7 +63,14 @@ app.get('/todo/update/:id', (req, res)=>{
     const taskId = req.params.id;
     Todo.findByIdAndUpdate(taskId, (err, doc)=>{
         console.log('This task has been updated')
-        res.redirect('/todolist');
+        res.redirect(url.format({
+            pathname: '/todolist',
+            query: {
+                message: 'The task has been updated',
+                updateMsg: true
+            }
+        }))
+        // res.redirect('/todolist');
     })
     // res.json(req.params.id)
 })
@@ -78,7 +80,14 @@ app.get('/todo/delete/:id', (req, res)=>{
     const taskId = req.params.id;
     Todo.findByIdAndDelete(taskId, (err, doc)=>{
         console.log('This task has been deleted')
-        res.redirect('/todolist');
+        res.redirect(url.format({
+            pathname: '/todolist',
+            query: {
+                message: 'This task has been deleted',
+                deleteMsg: true
+            }
+        }))
+        // res.redirect('/todolist');
     })
     // res.json(req.params.id)
 })
