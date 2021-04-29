@@ -1,7 +1,7 @@
 <h1>Daily Todo List</h1>
 {{#if message}}
 <div class="alert alert-success" role="alert">
-  {{message}}
+    {{message}}
 </div>
 {{/if}}
 <form action="/todolist" method="POST" class="form">
@@ -20,15 +20,16 @@
 
 {{#if tasks}}
 <h1>ToDo Daily Task</h1>
-    <ul class="task">
-        {{#each tasks}}
-            <li>
-                Title: {{title}}, 
-                Time: {{time}}, 
-                Date: {{date}}
-            </li>
-            <a class="btn btn-danger" href="/todo/delete/{{_id}}">Delete</a>
-                <a class="btn btn-primary" href="/todo/update/{{_id}}">Update</a>
-        {{/each}}
-    </ul>
+<ul class="task">
+    {{#each tasks}}
+    <li>
+        Title: {{title}},
+        Time: {{time}},
+        Date: {{date}}
+        <a class="btn btn-danger" href="/todo/delete/{{_id}}">Delete</a>
+        <a class="btn btn-primary" href="/todo/update/{{_id}}">Update</a>
+    </li>
+
+    {{/each}}
+</ul>
 {{/if}}

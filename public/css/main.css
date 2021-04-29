@@ -18,11 +18,10 @@
   
   .task {
     display: inline-block;
-   
+    width: 50%;
     margin: 10px auto;
     padding: 5px;
     border-radius: 5px;
-    background-color:transparent;
     list-style-type: none;
     border: 1px solid black;
     

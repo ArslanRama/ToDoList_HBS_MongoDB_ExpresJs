@@ -29,6 +29,7 @@ app.use(express.urlencoded({
 }))
 
 //! Routing *CRUD
+const url =require('url');
 //! Create(C)
 // Create a new documents for DB
 app.post('/todolist', (req, res)=> {
@@ -37,7 +38,15 @@ app.post('/todolist', (req, res)=> {
     // Create/save
     newTask.save(()=>{
         // go back to the form
-        res.redirect('/todolist');
+        const message = 'A new task has been created'
+        res.redirect(url.format({
+            pathname: './todolist',
+            query:{
+                message: message
+            }
+
+        }))
+        // res.redirect('/todolist');
         // res.render('tasklist', {
         //     successMsg: 'Your Task successfully added'
         // })
