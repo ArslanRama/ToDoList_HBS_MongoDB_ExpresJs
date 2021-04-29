@@ -38,11 +38,11 @@ app.post('/todolist', (req, res)=> {
     // Create/save
     newTask.save(()=>{
         // go back to the form
-        const message = 'A new task has been created'
         res.redirect(url.format({
             pathname: './todolist',
             query:{
-                message: message
+                message: 'A new task has been created',
+                success: true
             }
 
         }))
@@ -56,7 +56,9 @@ app.post('/todolist', (req, res)=> {
 app.get('/todolist', (req,res)=>{
     // Find all data from Todo collections
     Todo.find((err, tasks)=>{
-        res.render('tasklist', {tasks}) //ES6
+        const data =req.query
+        console.log(data)
+        res.render('tasklist', {tasks, data}) //ES6
     })
 })
 

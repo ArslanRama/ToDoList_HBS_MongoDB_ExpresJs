@@ -1,7 +1,12 @@
 <h1>Daily Todo List</h1>
-{{#if message}}
+{{#if data.success}}
 <div class="alert alert-success" role="alert">
-    {{message}}
+    {{data.message}}
+</div>
+{{/if}}
+{{#if data.deletemsg}}
+<div class="alert alert-success" role="alert">
+    {{data.message}}
 </div>
 {{/if}}
 <form action="/todolist" method="POST" class="form">

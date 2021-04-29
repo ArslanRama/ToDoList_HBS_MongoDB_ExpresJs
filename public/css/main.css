@@ -30,6 +30,7 @@
   .btn-danger, .btn-primary {
     width: 15%;
     margin: 5px auto; 
+    display: inline-block;
   }
 
   ul {
