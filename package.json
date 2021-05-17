@@ -1,0 +1,25 @@
+{
+  "name": "myfirstexpresssite",
+  "version": "1.0.0",
+  "description": "my first expressjs website",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "aslan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-crypto": "1.0.5",
+    "express-handlebars": "^5.3.0",
+    "hbs": "^4.1.2",
+    "mongoose": "^5.12.5",
+    "node": "^15.14.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {}
+}
